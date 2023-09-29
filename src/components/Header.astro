@@ -1,0 +1,28 @@
+---
+import { navigationLinks } from "../data/navigationLinks";
+---
+
+<header class="w-full flex items-center justify-center">
+  <nav
+    class="bg-white/5 rounded-full flex items-center justify-between w-full p-4"
+  >
+    <a href="/" class="font-bold text-xl text-brand-light/90" aria-label="home"
+      >gillbates.</a
+    >
+    <ul class="flex items-center justify-center gap-x-10">
+      {
+        navigationLinks.map((link) => (
+          <li class="">
+            <a
+              href={link.url}
+              class="font-bold text-brand-light/50 hover:text-brand-light/90"
+              aria-label={link.label}
+            >
+              {link.label}.
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

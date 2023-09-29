@@ -1,0 +1,40 @@
+---
+import Head from "../components/Head.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: {
+    src: string;
+    alt: string;
+  };
+  publishDate: Date;
+}
+
+const {
+  title,
+  description,
+  ogImage = {
+    src: "/og-image.png",
+    alt: "A screenshot of the website",
+  },
+  publishDate = new Date(),
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Head
+    title={title}
+    description={description}
+    ogImage={ogImage}
+    publishDate={publishDate}
+  />
+  <body
+    class="bg-brand-dark text-brand-light font-sans my-8 lg:max-w-7xl lg:mx-auto"
+  >
+    <div class="">
+      <slot />
+    </div>
+  </body>
+</html>

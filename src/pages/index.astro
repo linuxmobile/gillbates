@@ -1,16 +1,14 @@
 ---
+import Layout from "../layout/Layout.astro";
+import Header from "../components/Header.astro";
 
+const title = "gillbates.";
+const description =
+  "Frontend Developer focused on creativity and astronomic designs.";
+const publishDate = new Date();
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="bg-black text-white">
-    <h1 class="text-9xl font-sans">Astro</h1>
-  </body>
-</html>
+<Layout {title} {description} {publishDate}>
+  <Header />
+  <h1 class="text-9xl">GillBates.</h1>
+</Layout>
