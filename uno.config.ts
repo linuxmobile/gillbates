@@ -7,8 +7,15 @@ export default defineConfig({
     presetWebFonts({
       provider: 'google',
       fonts: {
-        sans: 'Montserrat',
+        sans: ['Montserrat', 'Montserrat:100-900'],
       },
     }),
   ],
+  theme: {
+    colors: {
+      'brand-dark': '#000000',
+      'brand-light': '#EFF5FF',
+      'brand-accent': '#888F63',
+    }
+  }
 })
