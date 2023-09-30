@@ -1,0 +1,22 @@
+---
+import { socialLinks } from "../data/socialLinks";
+---
+
+<section class="w-full">
+  <ul class="grid grid-cols-4 items-center justify-center gap-x-6">
+    {
+      socialLinks.map((link) => {
+        const isTrue = link.expanded ? "col-span-2" : "";
+        return (
+          <li
+            class={`bg-brand-light/5 rounded-full px-8 py-6 text-center ${isTrue}`}
+          >
+            <a href={link.url} class="text-3xl font-bold text-brand-light/90">
+              <span class="">{link.label}.</span>
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
